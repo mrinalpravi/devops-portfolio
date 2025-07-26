@@ -42,4 +42,4 @@ jobs:
 
       - name: Set image on Kubernetes deployment
         run: |
-          kubectl set image deployment/devops-deployment devops-deployment=mrinal3242/devops-portfolio:latest
+          kubectl set image deployment/devops-deployment devops-container=mrinal3242/devops-portfolio:latest
