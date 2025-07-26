@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: mrinal3242/devops-portfolio:latest
+          tags: mrinal3242/devops-portfolio:${{ github.sha }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -40,6 +40,7 @@ jobs:
         run: |
           aws eks update-kubeconfig --region us-east-1 --name mravi-eks-cluster
 
-      - name: Set image on Kubernetes deployment
+      - name: Update image and rollout
         run: |
-          kubectl set image deployment/devops-deployment devops-container=mrinal3242/devops-portfolio:latest
+          kubectl set image deployment/devops-deployment devops-container=mrinal3242/devops-portfolio:${{ github.sha }}
+          kubectl rollout restart deployment/devops-deployment
