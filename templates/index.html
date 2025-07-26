@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }} | DevOps Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #f5f5f5;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            height: 55vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .section {
+            padding: 3rem 1rem;
+        }
+
+        .card {
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            font-size: 13px;
+            background-color: #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center py-2" style="font-size: 0.9rem; font-style: italic; background-color: #f5f5f5;">
+        📞 +91 9745948889 |
+        ✉️ <a href="mailto:mrinalpr1998@gmail.com">mrinalpr1998@gmail.com</a> |
+        🔗 <a href="https://www.linkedin.com/in/mrinal-ravi" target="_blank">linkedin.com/mrinal-ravi</a> |
+        🐙 <a href="https://github.com/mrinalpravi" target="_blank">github.com/mrinalpravi</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Mrinal Ravi</h1>
+            <h5>Site Reliability Engineer</h5>
+            <h6>Guidewire Software, Bangalore</h6>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section text-center bg-white">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="text-muted small">
+                Passionate DevOps - SRE Engineer with more than 4 years of hands-on experience in AWS, Kubernetes, Datadog,
+IaC Tools and Azure fundamentals. I excel at orchestrating containerized applications and implementing Site
+Reliability Engineering (SRE) principles to ensure system reliability, scalability, and resilience.
+            </p>
+        </div>
+    </div>
+
+    <!-- Publications Section -->
+<!-- Publications Section -->
+<div class="section text-center">
+    <div class="container">
+        <h2>Publications</h2>
+        <div class="row g-3 justify-content-center">
+
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm text-start">
+                    <h6 class="mb-1">
+                        <a href="https://blog.ibsplc.com/innovation/balancing-speed-and-reliability-best-practices-for-the-digital-edge" target="_blank" class="text-decoration-none">
+                            Balancing Speed and Reliability: Best Practices for the Digital Edge
+                        </a>
+                    </h6>
+                    <small class="text-muted">IBS Software · Dec 30, 2024</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm text-start">
+                    <h6 class="mb-1">
+                        <a href="https://medium.com/@mrinalraviponnambath/cloud-governance-made-simple-with-cloud-custodian-6d72184acddd" target="_blank" class="text-decoration-none">
+                            Cloud Governance Made Simple with Cloud Custodian
+                        </a>
+                    </h6>
+                    <small class="text-muted">Medium · Dec 1, 2024</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm text-start">
+                    <h6 class="mb-1">
+                        <a href="https://medium.com/@mrinalraviponnambath/running-chaos-experiments-in-kubernetes-with-chaos-mesh-a-hands-on-guide-ed02db94b5df" target="_blank" class="text-decoration-none">
+                            Running Chaos Experiments in Kubernetes with Chaos Mesh: A Hands-on Guide
+                        </a>
+                    </h6>
+                    <small class="text-muted">Medium · Oct 19, 2024</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm text-start">
+                    <h6 class="mb-1">
+                        <a href="https://medium.com/@mrinalraviponnambath/aws-resource-provisioning-using-crossplane-d2ea84b801fc" target="_blank" class="text-decoration-none">
+                            AWS Resource Provisioning using Crossplane
+                        </a>
+                    </h6>
+                    <small class="text-muted">Medium · Apr 4, 2024</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- Skills Section -->
+<div class="section">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Skills -->
+            <div class="col-md-6">
+                <h2 class="text-center">Skills</h2>
+                <div class="row g-2">
+                    {% for skill in [
+                        "AWS", "Kubernetes", "Terraform", "Teamcity", "Datadog",
+                        "Scripting (Python, Shell)", "CI/CD (GitHub Actions, Jenkins)"
+                    ] %}
+                        <div class="col-6">
+                            <div class="card p-2 shadow-sm text-center">
+                                <span class="small">{{ skill }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="col-md-6">
+                <h2 class="text-center">Certifications</h2>
+                <div class="row g-2">
+                    {% for cert in [
+                        "AWS Solutions Architect Associate",
+                        "AWS Sysops Administrator",
+                        "AWS AI Practitioner",
+                        "Terraform Associate",
+                        "Kubernetes - CKAD",
+                        "Azure Fundamentals"
+                    ] %}
+                        <div class="col-12">
+                            <div class="card p-2 shadow-sm text-center">
+                                <span class="small">{{ cert }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-5">
+        <p>&copy; 2025 {{ name }} | Built with Flask & Bootstrap</p>
+    </footer>
+
+</body>
+</html>
