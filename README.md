@@ -1,2 +1,2 @@
 # devops-portfolio
-devops-portfolio
+Simple python flask application
